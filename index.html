@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Watchdog | Investigations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>THE WATCHDOG</h1>
+        <p>Exposing Fraud & Deception</p>
+        <div class="header-actions">
+            <button id="toggle-form-btn" class="add-post-btn">+ Add New Investigation</button>
+        </div>
+    </header>
+
+    <div id="add-post-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleForm()">&times;</span>
+            <h2 id="form-title">Create New Investigation</h2>
+            <form id="add-post-form">
+                <input type="text" id="post-title" placeholder="Title" required>
+                <textarea id="post-excerpt" placeholder="Short Description/Excerpt" required></textarea>
+                <input type="url" id="post-image" placeholder="Image URL" required>
+                <input type="url" id="post-video" placeholder="YouTube Embed URL (e.g., https://www.youtube.com/embed/VIDEO_ID)" required>
+                
+                <div class="content-editor-section">
+                    <label><strong>Investigation Content:</strong></label>
+                    <div class="content-controls">
+                        <button type="button" class="content-btn" onclick="addContentBlock('heading')">+ Add Heading</button>
+                        <button type="button" class="content-btn" onclick="addContentBlock('text')">+ Add Text</button>
+                        <button type="button" class="content-btn" onclick="addContentBlock('image')">+ Add Image</button>
+                        <button type="button" class="content-btn" onclick="addContentBlock('video')">+ Add Video</button>
+                    </div>
+                    <div id="content-blocks"></div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Add Investigation</button>
+            </form>
+        </div>
+    </div>
+
+    <main id="blog-container" class="grid-container">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
