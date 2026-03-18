@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Watchdog | Investigations</title>
+    <title>The Truth | Labs </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>THE WATCHDOG</h1>
-        <p>Exposing Fraud & Deception</p>
-        <div class="header-actions">
-            <button id="toggle-form-btn" class="add-post-btn">+ Add New Investigation</button>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="index.html">The Truth Lab</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#blog-container">Blogs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="toggle-form-btn" class="add-post-btn" onclick="toggleForm()">+ Add New Blogs</button>
         </div>
+    </nav>
+
+    <header class="hero">
+        <h1>The Truth Lab</h1>
+        <p>Exposing Fraud, Deception & Everything</p>
     </header>
 
     <div id="add-post-modal" class="modal hidden">
         <div class="modal-content">
             <span class="close-btn" onclick="toggleForm()">&times;</span>
-            <h2 id="form-title">Create New Investigation</h2>
+            <h2 id="form-title">Create New Blogs </h2>
             <form id="add-post-form">
                 <input type="text" id="post-title" placeholder="Title" required>
                 <textarea id="post-excerpt" placeholder="Short Description/Excerpt" required></textarea>
                 <input type="url" id="post-image" placeholder="Image URL" required>
-                <input type="url" id="post-video" placeholder="YouTube Embed URL (e.g., https://www.youtube.com/embed/VIDEO_ID)" required>
+                <input type="url" id="post-video" placeholder="YouTube Embed URL">
                 
                 <div class="content-editor-section">
-                    <label><strong>Investigation Content:</strong></label>
+                    <label><strong>Blogs Content:</strong></label>
                     <div class="content-controls">
                         <button type="button" class="content-btn" onclick="addContentBlock('heading')">+ Add Heading</button>
                         <button type="button" class="content-btn" onclick="addContentBlock('text')">+ Add Text</button>
@@ -41,9 +51,33 @@
         </div>
     </div>
 
-    <main id="blog-container" class="grid-container">
-        </main>
+    <main id="blog-container" class="grid-container"></main>
 
-    <script src="script.js"></script>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>The Truth Lab</h3>
+                <p>We investigate, explain, and share the facts behind headlines, claims, and viral stories.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get In Touch</h4>
+                    <p>Email: <a href="mailto:hello@truthlab.example">hello@truthlab.example</a></p>
+                    <p>Twitter: <a href="https://twitter.com/" target="_blank" rel="noreferrer">@TruthLab</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">&copy; <span id="footer-year"></span> The Truth Lab. All rights reserved.</div>
+    </footer>
+
+    <script type="module" src="script.js"></footer>
 </body>
 </html>

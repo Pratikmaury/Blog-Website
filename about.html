@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | The Truth Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="index.html">The Truth Lab</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>About The Truth Lab</h1>
+        <p>We dig into claims, follow the evidence, and share the real story behind the headlines.</p>
+    </header>
+
+    <main class="content-container">
+        <section>
+            <h2>Our Mission</h2>
+            <p>The Truth Lab exists to bring clarity to confusing or misleading information. We research, verify, and explain so you can make informed decisions.</p>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <p>We gather reports, review sources, and use verified data to build regular investigations and quick fact checks. Everything is documented and presented in a simple, readable format.</p>
+        </section>
+
+        <section>
+            <h2>Join the Community</h2>
+            <p>Have a tip? Spot something we missed? Reach out and we’ll take a look. Our community helps keep the conversation honest.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>The Truth Lab</h3>
+                <p>We investigate, explain, and share the facts behind headlines, claims, and viral stories.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get In Touch</h4>
+                    <p>Email: <a href="mailto:hello@truthlab.example">hello@truthlab.example</a></p>
+                    <p>Twitter: <a href="https://twitter.com/" target="_blank" rel="noreferrer">@TruthLab</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">&copy; <span id="footer-year"></span> The Truth Lab. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const yearEl = document.getElementById('footer-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
